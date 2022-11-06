@@ -1,0 +1,107 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.app_container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 600px;
+    margin: 0;
+    padding: 20px;
+    background-image: url("../img/cell.jpg");
+    background-position: bottom 17px right -112px;
+}
+
+.title_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_add {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.btn_delete {
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.list_editor_container {
+    background-color: #fff;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.action_edit {
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_update_img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.popup_container {
+    width: 400px;
+    margin: 100px;
+    padding: 20px;
+    overflow: auto;
+    position: absolute;
+    top: 20px; 
+    left: 20px;
+    background-color: #fff;
+    border: 2px solid black;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 20px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.popup-btn {
+    text-align: right;
+}
+
+.inserted {
+    text-decoration: none;
+}
