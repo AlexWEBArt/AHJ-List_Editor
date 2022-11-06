@@ -11,7 +11,7 @@ btnAdd.addEventListener('click', (e) => {
     e.preventDefault();
 
     popup.openPopup(containerPopup)
-    
+
     const btnCancel = document.querySelector('.btn_cancel');
 
     btnCancel.addEventListener('click', (e) => {
@@ -26,22 +26,14 @@ btnAdd.addEventListener('click', (e) => {
       e.preventDefault();
 
       popup.saveInputNote()
-      popup.addlistener()
-      // const lists = document.querySelectorAll('.inserted')
-      // console.log(lists)
-      // console.log(document.querySelectorAll('.inserted'))
-      // Array.from( lists )[ lists.length - 1 ].querySelector( '.btn_delete' ).addEventListener( 'click', () => this.closest( '.inserted' ).remove() )
 
+      const lists = document.querySelectorAll('.list_editor')
+      const btnDelete = Array.from( lists )[ lists.length - 1 ].querySelector( '.btn_delete' )
+      const btnUpdate = Array.from( lists )[ lists.length - 1 ].querySelector( '.btn_update_img' )
+      btnUpdate.addEventListener( 'click', () => popup.updateNote(btnUpdate.closest( '.list_editor' )) )
+      btnDelete.addEventListener( 'click', () => btnDelete.closest( '.list_editor' ).remove() )
     });
 });
-
-// const btnCancel = document.querySelector('.btn_cancel');
-
-// btnCancel.addEventListener('click', (e) => {
-//   e.preventDefault();
-
-//   popup.closePopup()
-// });
 
 // const btn = document.querySelector('.btn');
 

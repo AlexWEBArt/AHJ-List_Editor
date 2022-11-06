@@ -1,7 +1,6 @@
 export default class Popup {
     constructor() {
         this.container = null
-        this.inserted = null
     }
 
     openPopup(container) {
@@ -40,9 +39,9 @@ export default class Popup {
         const inputName = document.querySelector('.input_name')
         const inputCost = document.querySelector('.input_cost')
         const editor = document.querySelector('.list_editor_container')
-        
+        console.log(this.inputName)
         editor.insertAdjacentHTML('beforeend', `
-            <ul classs="list_editor">
+            <ul class="list_editor">
                 <li class="name">
                     <p class="name_title">${inputName.value}</p>
                 </li>
@@ -57,9 +56,12 @@ export default class Popup {
         `)
     }
 
-    addlistener() {
-        const lists = document.querySelectorAll('.list_editor')
-        console.log(lists)
-        Array.from( lists )[ lists.length - 1 ].querySelector( '.btn_delete' ).addEventListener( 'click', () => this.closest( '.list_editor' ).remove() )
+    updateNote(listEditor) {
+        this.openPopup(this.container)
+        const inputName = document.querySelector('.input_name')
+        const inputCost = document.querySelector('.input_cost')
+        inputName.value = listEditor.querySelector('.name_title').textContent
+        inputCost.value = listEditor.querySelector('.cost_title').textContent
     }
+
 }
