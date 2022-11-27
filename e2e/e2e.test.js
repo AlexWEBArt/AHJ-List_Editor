@@ -36,10 +36,10 @@ describe('Batton tooltip', () => {
   test('a tooltip appears when you click', async () => {
     await page.goto(baseUrl);
 
-    const btn = await page.$('.btn');
+    const btnAdd = await page.$('.btn_add');
 
-    await btn.click();
+    await btnAdd.click();
 
-    await page.waitForSelector('.container-btn-message');
+    await page.waitForSelector('.popup_container');
   });
 });
